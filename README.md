@@ -18,6 +18,8 @@
 <table align="center">
 <tr>
 <td><img src = "https://user-images.githubusercontent.com/93712785/215818454-3c407c76-d934-412c-b9bb-ab4174f4e941.png" width = "800" hight = "400"/>
+<tr>
+<tr>
 <td><img src = "https://user-images.githubusercontent.com/93712785/215818704-fe8da417-7b75-49c4-aade-90f584ce07ba.png" width = "800" hight = "400"/>
 <tr>
 <tr>
