@@ -14,7 +14,7 @@
 - 관심있는 제품 한 눈에 알아보기 쉬운 찜 목록
 - 제품들에 대한 후기를 알 수 있는 리뷰
 
-
+## 프로젝트 주요 기능 이미지
 <table align="center">
 <tr>
 <td><img src = "https://user-images.githubusercontent.com/93712785/215818454-3c407c76-d934-412c-b9bb-ab4174f4e941.png" width = "800" hight = "400"/>
