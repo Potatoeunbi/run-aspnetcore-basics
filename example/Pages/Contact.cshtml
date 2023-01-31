@@ -1,0 +1,48 @@
+﻿@page
+@model AspnetRunBasics.ContactModel
+@{
+    ViewData["Title"] = "Contact";
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item" style="font-weight:500;font-size:25px" aria-current="page"></li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header bg-primary text-white"  style="font-weight:500;font-size:25px">
+                    <i class="fa" ></i> Login
+                </div>
+                <div class="card-body">
+                    <form asp-page-handler="logIn" method="post" name="loginForm" id="login_form">
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="userEmail" aria-describedby="emailHelp" placeholder="이메일을 입력하세요." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Password</label>
+                            <input type="password" class="form-control" id="name" name="userPwd" aria-describedby="emailHelp" placeholder="비밀번호를 입력하세요." required>
+                        </div>
+                        <div class="mx-auto">
+                            <button type="submit" class="btn btn-primary text-right">로그인</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+

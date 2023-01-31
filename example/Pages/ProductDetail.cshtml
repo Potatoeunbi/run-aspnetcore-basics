@@ -1,0 +1,113 @@
+﻿@page "/Product/{productId}"
+@model AspnetRunBasics.ProductDetailModel
+@{
+    ViewData["Title"] = "ProductDetail";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a asp-page="Index">Home</a></li>
+                    <li class="breadcrumb-item"><a asp-page="Product">Product</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">@Model.Product.Name</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <!-- Image -->
+        <div class="col-12 col-lg-6">
+            <div class="card bg-light mb-3">
+                <div class="card-body">
+                    <a href="" data-toggle="modal" data-target="#productModal">
+                        <img width="342px" height="342px" style="margin-left:60px" class="img-fluid" src="~/images/product/@Model.Product.ImageFile" />
+                        <p style="font-size:25px" class="text-center">@Model.Product.Name</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add to cart -->
+        <div class="col-12 col-lg-6 add_to_cart_block">
+            <div class="card bg-light mb-3">
+                <div class="card-body">
+                    <label style="font-size:25px; font-weight:bold">가격 (최저가 기준)</label>
+                    <p class="price">@Model.Product.Price 만원</p>
+                    <form asp-page-handler="AddToCart" method="post" name="addToCartForm" id="add_cart_form">
+                        
+                        <div class="form-group">
+                            <p></p>
+                            <label style="font-size:25px; font-weight:bold">제품 사양</label>
+                            <p>@Model.Product.Summary</p>
+                        </div>
+                         <div class="form-group">
+                            <div class="input-group mb-3">
+                                <input asp-for="Color"  type="hidden" class="custom-select" id="colors" value="black">
+                                <input asp-for="Quantity" type="hidden" class="form-control" id="quantity" name="quantity" value="1">
+                            </div>
+                        </div>
+                        <a href="javascript:;" onclick="parentNode.submit();" class="btn btn-success btn-lg btn-block text-uppercase">
+                            <i class="fa"></i> 찜 목록 추가
+                        </a>
+                        <input type="hidden" asp-for="@Model.Product.Id" name="productId" />
+
+                        <input type="hidden" asp-for="@Model.Product.Id" name="productId" />
+                    </form>
+
+
+
+
+
+                    <div class="reviews_product p-3 mb-2 ">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        (4/5)
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <form asp-page-handler="AddReview" method="post" name="addReviewForm" id="add_review_form">
+            <a>작성자 : </a>
+            <input type="text" name="writer"/>
+            <p></p>
+            <a>리뷰 내용 : </a>
+            <input  type="text" name="comment" style="width: 300px; margin-bottom:20px; " cols="40" rows="5"/>
+            <a href="javascript:;" onclick="parentNode.submit();" class="btn btn-success btn-lg btn-block text-uppercase">
+                                    <i class="fa">리뷰 작성하기</i> 
+            </a>
+            <input type="hidden" asp-for="@Model.Product.Id" name="RproductId" />
+        </form>
+     <p></p>
+
+    <div class="row">
+        <!-- Description -->
+        <div class="col-12">
+            <div class="card border-light mb-3">
+                <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-align-justify"></i> 리뷰</div>
+                <div class="card-body">
+
+                    @foreach (var talk in Model.TalkList)
+                    {
+                    <li> <a class="">@talk.Name :</a>
+                    <a class="">@talk.Review</a> </li>
+                    }
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,22 @@
+﻿@model Category
+
+<!--Product 부분-->
+
+<div class="card">
+    <a asp-page="product" asp-route-categoryId="@Model.Id"><img asp-append-version="true" width="200px" height="200px" class="card-img-top" src="~/images/category/@Model.ImageName" alt=""></a>
+    <div class="card-body">
+        <h4 style="font-weight:600" class="card-title text-center"><a asp-page="product" asp-route-categoryId="@Model.Id" class="color-main">@Model.Name</a></h4>
+        <div class="row">
+            <div class="col">
+
+                @*<a asp-page="Cart" asp-route-productId="@Model.Id" class="btn btn-success btn-block">Add to Cart</a>*@
+
+                <form method="post" name="addToCartForm" id="add_cart_form">
+                    <a asp-page="product" asp-route-categoryId="Model.Id" class="btn btn-success btn-block">Details</a>
+                    <input type="hidden" asp-for="@Model.Id" name="categoryId" />
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

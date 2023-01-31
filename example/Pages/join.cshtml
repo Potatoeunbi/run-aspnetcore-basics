@@ -1,0 +1,53 @@
+﻿@page
+@{
+    ViewData["Title"] = "Join";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item" style="font-weight:500;font-size:25px" aria-current="page"></li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+               <div class="card-header bg-primary text-white"  style="font-weight:500;font-size:25px">
+                    <i class="fa" ></i> Join
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="userEmail" aria-describedby="emailHelp" placeholder="이메일을 입력하세요." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Password</label>
+                            <input type="password" class="form-control" id="pwd" name="userPwd" aria-describedby="emailHelp" placeholder="비밀번호를 입력하세요." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="이름을 입력하세요." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Phone Number</label>
+                            <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="전화번호를 입력하세요." required>
+                        </div>
+                        <div class="mx-auto">
+                            <button type="submit" class="btn btn-primary text-right">회원가입</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
