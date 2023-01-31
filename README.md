@@ -24,10 +24,14 @@
 <tr>
 <tr>
 <td><img src = "https://user-images.githubusercontent.com/93712785/215818846-49337ef3-1192-426e-ac4f-f6516bbcfc4b.png" width = "800" hight = "400"/>
+<tr>
+<tr>
 <td><img src = "https://user-images.githubusercontent.com/93712785/215818915-12dbcbe0-17b8-476a-95c7-1dfc3639b51c.png" width = "800" hight = "400"/>
 <tr>
 <tr>
 <td><img src = "https://user-images.githubusercontent.com/93712785/215818996-b8f1b8c3-d02c-44b8-a109-f0fa71e443b6.png" width = "800" hight = "400"/>
+<tr>
+<tr>
 <td><img src = "https://user-images.githubusercontent.com/93712785/215819073-ea793e9b-f424-445f-9939-be2f38c56f78.png" width = "800" hight = "400"/>
 <tr>
 </table>
